@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="container">
+      <div class="calculator">
+        <h2>CASIO</h2>
+        <span>FX-115ESPLUS</span>
+        <form>
+          <div class="display">
+            <input type="text" name="display" id="display" placeholder="0"><i class="fa-solid fa-heart"></i>
+          </div>
+          <div>
+            <input id="clear" type="button" value="C" onclick="display.value = '' " class="equal operator">
+            <input id="group" type="button" value="DET" onclick="display.value =  display.value.toString().slice(0,-1)"
+              class="equal operator">
+          </div>
+          <div>
+            <input type="button" value="7" onclick="display.value += '7' ">
+            <input type="button" value="8" onclick="display.value += '8' ">
+            <input type="button" value="9" onclick="display.value += '9' ">
+            <input id="group" type="button" value="/" onclick="display.value += '/' " class="operator">
+          </div>
+          <div>
+            <input type="button" value="4" onclick="display.value += '4' ">
+            <input type="button" value="5" onclick="display.value += '5' ">
+            <input type="button" value="6" onclick="display.value += '6' ">
+            <input id="group" type="button" value="*" onclick="display.value += '*' " class="operator">
+          </div>
+          <div>
+            <input type="button" value="1" onclick="display.value += '1' ">
+            <input type="button" value="2" onclick="display.value += '2' ">
+            <input type="button" value="3" onclick="display.value += '3' ">
+            <input id="group" type="button" value="-" onclick="display.value += '-' " class="operator">
+          </div>
+          <div>
+            <input class="group" type="button" value="." class="operator" id="dot">
+            <input type="button" value="0" onclick="display.value += '0' ">
+            <input id="group" type="button" value="=" onclick="display.value = eval(display.value)" class="operator">
+            <input id="group" type="button" value="+" onclick="display.value += '+' " class="operator">
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="/js/app.js"></script>
+  </body>
+</html>
